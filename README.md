@@ -2,9 +2,9 @@
 
 ## Nutrição Sistêmica, Saciedade e Emagrecimento Saudável
 
-Caderno temático desenvolvido como parte de um Desafio de Projeto da DIO, utilizando pesquisa orientada por fontes e o NotebookLM como ferramenta de apoio ao estudo.
+Caderno temático desenvolvido como parte de um **Desafio de Projeto da DIO**, utilizando curadoria de fontes, experimentação de prompts e o **NotebookLM** como ferramenta de apoio à pesquisa, organização e análise do conhecimento.
 
-O projeto tem como objetivo investigar conceitos relacionados à alimentação saudável, saciedade, saúde intestinal, planejamento de refeições e preparação prática de alimentos, transformando os conhecimentos estudados em um material de consulta simples e reutilizável.
+O projeto reúne receitas práticas, estratégias de **Meal Prep**, organização alimentar e conceitos relacionados à saciedade e saúde intestinal, documentando também o processo de utilização da Inteligência Artificial.
 
 ---
 
@@ -12,177 +12,254 @@ O projeto tem como objetivo investigar conceitos relacionados à alimentação s
 
 ### Contexto
 
-A alimentação saudável envolve diferentes fatores que vão além da escolha isolada de alimentos. Este projeto aborda a alimentação de forma sistêmica, considerando aspectos como qualidade dos alimentos, saciedade, densidade energética, organização das refeições e preparação antecipada.
+A alimentação saudável envolve diferentes fatores que vão além da escolha isolada de alimentos.
 
-Um dos focos do estudo é a relação entre o intestino e o cérebro, além de estratégias práticas para facilitar a organização alimentar durante a semana.
+Este projeto aborda o tema de forma integrada, considerando:
+
+* composição das refeições;
+* variedade alimentar;
+* saciedade;
+* densidade energética;
+* preparação dos alimentos;
+* organização semanal;
+* Meal Prep;
+* armazenamento e congelamento;
+* adaptação de receitas.
+
+Um dos temas estudados é a relação entre o intestino e o cérebro, juntamente com estratégias práticas para facilitar a organização alimentar durante a semana.
 
 ### Objetivos
 
-Os principais objetivos deste caderno temático são:
+Os principais objetivos são:
 
-1. Compreender conceitos relacionados à relação entre microbiota intestinal e eixo intestino-cérebro.
-2. Estudar estratégias de planejamento e preparação antecipada de refeições (Meal Prep).
-3. Explorar receitas práticas com atenção à saciedade e à composição nutricional.
-4. Investigar substituições de ingredientes com maior densidade energética por alternativas mais leves, quando apropriado.
-5. Desenvolver prompts capazes de auxiliar pesquisas, revisões e organização do conhecimento.
-6. Transformar o conhecimento obtido em um miniguia de estudo reutilizável.
-
----
-
-# 📚 Curadoria de Fontes
-
-As fontes utilizadas foram selecionadas considerando sua relevância para os assuntos estudados e foram utilizadas como base para as consultas realizadas no NotebookLM.
-
-| Nº | Fonte                    | Tipo                   | Utilização                                                    |
-| -- | ------------------------ | ---------------------- | ------------------------------------------------------------- |
-| 1  | Dieta 3 Passos           | Conteúdo especializado | Pesquisa relacionada à alimentação e estratégias nutricionais |
-| 2  | TudoGostoso              | Receitas               | Pesquisa e adaptação de preparações                           |
-| 3  | Receiteria               | Receitas               | Pesquisa de preparações práticas                              |
-| 4  | Materiais especializados | Artigos/Vídeos/PDFs    | Complementação do estudo                                      |
-
-> As fontes devem ser analisadas criticamente e suas informações não devem ser consideradas equivalentes a orientação médica ou nutricional individualizada.
+1. Estudar conceitos relacionados à alimentação, saciedade e saúde intestinal.
+2. Explorar estratégias de planejamento e preparação antecipada de refeições.
+3. Organizar receitas práticas encontradas nas fontes selecionadas.
+4. Analisar possibilidades de adaptação e substituição de ingredientes.
+5. Experimentar diferentes técnicas de Engenharia de Prompts.
+6. Documentar problemas encontrados durante a utilização da IA e suas respectivas soluções.
+7. Transformar o conhecimento pesquisado em um miniguia de estudo reutilizável.
 
 ---
 
-# 🧠 Engenharia de Prompts
+## 📚 Curadoria de Fontes
 
-Durante o desenvolvimento do projeto foram utilizados diferentes tipos de prompts para comparar a qualidade das respostas obtidas.
+Foram selecionadas **9 fontes**, divididas entre portais de receitas e vídeos sobre receitas, Meal Prep e organização alimentar.
 
-## Prompt inicial
+As fontes completas e suas respectivas contribuições estão documentadas em:
 
-Um dos primeiros testes utilizou uma abordagem genérica para solicitar sugestões de receitas e estratégias alimentares.
+➡️ [`fontes/fontes.md`](fontes/fontes.md)
 
-### Problema identificado
+### Resumo das fontes
 
-As respostas apresentavam informações muito amplas e nem sempre especificavam:
+| Nº | Fonte                  | Tipo               | Principal contribuição                          |
+| -- | ---------------------- | ------------------ | ----------------------------------------------- |
+| 1  | Dieta 3 Passos         | Portal de receitas | Receitas fitness e adaptações                   |
+| 2  | TudoGostoso            | Portal de receitas | Receitas e preparações práticas                 |
+| 3  | Receiteria             | Portal de receitas | Receitas fitness simples                        |
+| 4  | Betto Auge             | Vídeo              | Torta de frango fit e preparação proteica       |
+| 5  | Anjo Low Carb Receitas | Vídeo              | Preparações de forno e receitas low carb        |
+| 6  | Itaciária Cordeiro     | Vídeo              | Receitas saudáveis e rápidas                    |
+| 7  | Doobydobap             | Vídeo              | Meal Prep e saúde intestinal                    |
+| 8  | Mirielly Ruback        | Vídeo              | Preparação de proteínas e alimentos congeláveis |
+| 9  | Gabi Barreto           | Vídeo              | Marmitas, preparação em volume e congelamento   |
 
-* quantidade de ingredientes;
-* objetivo da preparação;
-* possibilidade de congelamento;
+> As fontes práticas foram utilizadas principalmente para receitas, técnicas culinárias e organização alimentar. Informações relacionadas à saúde e nutrição devem ser interpretadas de acordo com a fonte original e, quando necessário, confrontadas com literatura científica e orientação profissional.
+
+---
+
+## 🧠 Engenharia de Prompts
+
+Durante o desenvolvimento foram realizados diferentes testes de prompts para avaliar como a qualidade das instruções influencia os resultados produzidos pela IA.
+
+O processo começou com perguntas genéricas e evoluiu para prompts com:
+
+* contexto;
+* objetivo;
+* fontes;
+* critérios;
+* formato de resposta;
+* limitações;
+* instruções de verificação.
+
+Os testes completos estão documentados em:
+
+➡️ [`prompts/prompts-testados.md`](prompts/prompts-testados.md)
+
+### Estrutura utilizada
+
+**Contexto + Objetivo + Fontes + Critérios + Formato + Limitações**
+
+Essa estrutura ajudou a reduzir respostas genéricas e aumentar a rastreabilidade das informações.
+
+---
+
+## 🔎 Cicatrizes e Troubleshooting
+
+Durante o desenvolvimento foram identificados problemas relacionados à utilização da Inteligência Artificial, incluindo:
+
+* respostas genéricas;
+* informações não encontradas nas fontes;
 * substituições de ingredientes;
-* modo correto de preparo;
-* relação entre os ingredientes e o objetivo da refeição.
+* preparo incompleto de receitas;
+* dúvidas sobre congelamento e descongelamento;
+* generalização de técnicas culinárias;
+* interpretação de informações nutricionais;
+* confusão entre conteúdo culinário e evidência científica.
+
+Para cada problema foram testadas estratégias de reformulação dos prompts.
+
+A documentação completa está disponível em:
+
+➡️ [`prompts/cicatrizes.md`](prompts/cicatrizes.md)
+
+### Processo utilizado
+
+**Pesquisar → Testar → Identificar problemas → Reformular → Verificar → Documentar**
 
 ---
 
-## Prompt aprimorado
+## 📖 Miniguia de Estudo
 
-A partir dos problemas encontrados, os prompts passaram a apresentar maior contexto, objetivo e restrições.
+O projeto também resultou em um miniguia organizado por temas.
 
-Exemplo:
+Entre os principais assuntos estão:
 
-> Atue como um assistente especializado em planejamento de refeições saudáveis. Com base exclusivamente nas fontes disponibilizadas neste notebook, sugira uma preparação prática rica em proteínas e com boa capacidade de saciedade. Informe os ingredientes, quantidades, modo de preparo, possibilidade de congelamento e descongelamento e possíveis substituições. Não invente informações que não estejam presentes nas fontes e indique quando determinada informação não puder ser confirmada.
-
-Essa abordagem produziu respostas mais estruturadas e adequadas ao objetivo do projeto.
-
----
-
-# 🔎 Cicatrizes e Troubleshooting
-
-Durante os testes foram identificadas algumas dificuldades na interação com a IA.
-
-### 1. Respostas genéricas
-
-Prompts muito curtos produziram respostas superficiais.
-
-**Solução:** fornecer contexto, objetivo, formato esperado e restrições.
-
-### 2. Informações não sustentadas pelas fontes
-
-Algumas respostas poderiam apresentar informações que não estavam claramente presentes no material pesquisado.
-
-**Solução:** solicitar explicitamente que a resposta fosse baseada somente nas fontes disponíveis e que informações não encontradas fossem identificadas como tal.
-
-### 3. Substituições inadequadas
-
-Durante a elaboração das receitas, foi necessário estabelecer critérios para evitar substituições incompatíveis com o objetivo nutricional da preparação.
-
-**Solução:** solicitar alternativas específicas e justificar as substituições com base nas fontes utilizadas.
-
-### 4. Preparação de leguminosas
-
-O preparo de alimentos como feijão e outras leguminosas exigiu atenção especial às etapas de preparo, incluindo o demolho quando recomendado pela fonte utilizada.
-
-**Solução:** solicitar que o modelo descrevesse o procedimento completo de preparação em vez de apresentar apenas a lista de ingredientes.
-
----
-
-# 📖 Miniguia de Estudo
-
-## 1. Saúde intestinal
-
-A saúde intestinal envolve diferentes aspectos relacionados ao funcionamento do sistema gastrointestinal e à interação entre o intestino e outros sistemas do organismo.
-
-Um dos conceitos estudados neste projeto é o eixo intestino-cérebro, que representa a comunicação bidirecional entre o sistema gastrointestinal e o sistema nervoso.
-
----
-
-## 2. Planejamento de refeições
-
-O Meal Prep consiste na preparação antecipada de refeições ou componentes das refeições para facilitar a organização alimentar durante a semana.
-
-Entre os aspectos estudados estão:
-
-* planejamento do cardápio;
-* organização dos ingredientes;
-* preparo em quantidade;
-* armazenamento;
+* Nutrição Sistêmica;
+* eixo intestino-cérebro;
+* saciedade;
+* densidade energética;
+* Meal Prep;
+* preparação em grande volume;
 * congelamento;
-* descongelamento;
-* montagem das refeições.
-
----
-
-## 3. Saciedade e composição das refeições
-
-A composição de uma refeição pode influenciar sua capacidade de proporcionar saciedade.
-
-Neste projeto são estudados especialmente:
-
+* branqueamento de vegetais;
+* leguminosas;
 * proteínas;
 * fibras;
-* vegetais;
-* sementes;
-* aveia;
-* alimentos com menor densidade energética.
+* substituição de ingredientes;
+* organização semanal.
+
+➡️ [`miniguia/resumo.md`](miniguia/resumo.md)
 
 ---
 
-# 📚 Glossário
+## 📚 Glossário
 
-| Conceito                   | Definição                                                                                          |
-| -------------------------- | -------------------------------------------------------------------------------------------------- |
-| **Eixo Intestino-Cérebro** | Sistema de comunicação bidirecional entre o trato gastrointestinal e o sistema nervoso.            |
-| **Meal Prep**              | Planejamento e preparação antecipada de refeições.                                                 |
-| **Densidade Energética**   | Relação entre a quantidade de energia e o peso ou volume de determinado alimento.                  |
-| **Pectina**                | Tipo de fibra encontrada principalmente nas paredes celulares de vegetais e frutas.                |
-| **Fitatos**                | Compostos presentes em diversos alimentos vegetais que podem interagir com determinados minerais.  |
-| **Branqueamento**          | Técnica culinária que utiliza calor por curto período seguida, geralmente, de resfriamento rápido. |
-| **Saciedade**              | Sensação de plenitude que contribui para reduzir a necessidade de continuar consumindo alimentos.  |
+Foi criado um glossário com os principais termos utilizados durante a pesquisa, incluindo:
 
----
+* microbiota;
+* eixo intestino-cérebro;
+* saciedade;
+* densidade energética;
+* Meal Prep;
+* branqueamento;
+* pectina;
+* fitatos;
+* leguminosas;
+* fibras;
+* porcionamento;
+* Engenharia de Prompts;
+* NotebookLM.
 
-# ♻️ Prompts Reutilizáveis
-
-## Prompt 1 — Análise de receita
-
-> Analise a seguinte receita utilizando exclusivamente as fontes disponíveis. Identifique os principais ingredientes, o método de preparo, possíveis substituições e os aspectos relacionados à saciedade. Não invente informações que não estejam nas fontes.
-
-## Prompt 2 — Meal Prep
-
-> Crie um plano de preparação semanal utilizando as receitas disponíveis nas fontes. Organize as preparações por etapas, indicando quais alimentos podem ser preparados antecipadamente e quais cuidados devem ser considerados para armazenamento, congelamento e descongelamento.
-
-## Prompt 3 — Revisão do conteúdo
-
-> Faça uma revisão do conteúdo estudado neste notebook. Organize os principais conceitos em tópicos, identifique possíveis contradições entre as fontes e indique quais informações precisam de confirmação adicional. Não apresente como fato qualquer informação que não esteja sustentada pelas fontes.
+➡️ [`miniguia/glossario.md`](miniguia/glossario.md)
 
 ---
 
-# 📝 Conclusão
+## 🤖 Prompts Reutilizáveis
 
-O desenvolvimento deste caderno permitiu explorar a utilização da Inteligência Artificial como ferramenta de apoio à pesquisa, organização e revisão de conhecimento.
+Como resultado da experimentação, foram criados prompts que podem ser reutilizados em futuras pesquisas.
 
-Além do conteúdo relacionado à alimentação e planejamento de refeições, o projeto também possibilitou experimentar técnicas de Engenharia de Prompts, comparar diferentes abordagens e documentar problemas encontrados durante o processo.
+Eles incluem modelos para:
 
-O resultado final é um material de estudo que combina curadoria de fontes, experimentação com IA, documentação do processo e organização prática do conhecimento.
+* pesquisa baseada em fontes;
+* análise de receitas;
+* planejamento de Meal Prep;
+* comparação de receitas;
+* identificação de adaptações;
+* análise de congelamento;
+* estudo de conceitos;
+* melhoria de prompts;
+* verificação crítica de respostas;
+* utilização de um prompt mestre.
 
+➡️ [`miniguia/prompts-reutilizaveis.md`](miniguia/prompts-reutilizaveis.md)
+
+---
+
+## 📁 Estrutura do Repositório
+
+```text
+miniebook_receitasfit/
+│
+├── README.md
+│
+├── fontes/
+│   └── fontes.md
+│
+├── prompts/
+│   ├── prompts-testados.md
+│   └── cicatrizes.md
+│
+└── miniguia/
+    ├── resumo.md
+    ├── glossario.md
+    └── prompts-reutilizaveis.md
+```
+
+---
+
+## 🛠️ Ferramentas Utilizadas
+
+* **GitHub** — organização e versionamento do projeto.
+* **NotebookLM** — apoio na análise e consulta das fontes selecionadas.
+* **Inteligência Artificial** — experimentação, organização e revisão do conteúdo.
+* **Markdown** — documentação dos materiais.
+
+---
+
+## 📌 Principais Aprendizados
+
+O desenvolvimento deste projeto permitiu compreender que uma boa pesquisa com Inteligência Artificial depende de mais do que simplesmente fazer perguntas.
+
+Foi necessário:
+
+1. Selecionar fontes relevantes.
+2. Organizar os materiais.
+3. Criar prompts específicos.
+4. Comparar diferentes respostas.
+5. Identificar limitações.
+6. Verificar informações.
+7. Diferenciar fontes práticas de informações científicas.
+8. Documentar o processo.
+
+O projeto também demonstrou a importância da **rastreabilidade**, evitando apresentar como informação de uma fonte algo que não esteja efetivamente presente nela.
+
+---
+
+## ⚠️ Considerações
+
+Este projeto possui finalidade **educacional e de estudo**.
+
+Os conteúdos apresentados não substituem avaliação, orientação ou acompanhamento de profissionais de saúde.
+
+Receitas, vídeos e portais utilizados como fontes práticas não devem ser automaticamente interpretados como evidência científica.
+
+---
+
+## 📝 Conclusão
+
+O **MiniEbook Receitas Fit** reúne pesquisa, curadoria de fontes, Engenharia de Prompts, experimentação com Inteligência Artificial e organização do conhecimento.
+
+O resultado é um caderno temático que não apenas apresenta informações sobre receitas e organização alimentar, mas também demonstra **como o conhecimento foi pesquisado, estruturado, verificado e documentado com o auxílio da IA**.
+
+---
+
+## 👤 Autor
+
+**Robson**
+
+Projeto desenvolvido para o **Desafio de Projeto da DIO**.
+
+---
+
+⭐ Projeto desenvolvido com foco em **aprendizado, organização do conhecimento e experimentação prática com Inteligência Artificial**.
